@@ -1,0 +1,1 @@
+//jsp page for logging out of admin or user

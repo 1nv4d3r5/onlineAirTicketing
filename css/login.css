@@ -1,0 +1,96 @@
+html{
+	background:#f58345;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ODM0NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYzE2MWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #f58345 0%, #ec161e 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f58345), color-stop(100%,#ec161e));
+	background:-webkit-linear-gradient(top,  #f58345 0%,#ec161e 100%);
+	background:-o-linear-gradient(top,  #f58345 0%,#ec161e 100%);
+	background:-ms-linear-gradient(top,  #f58345 0%,#ec161e 100%);
+	background:linear-gradient(to bottom,  #f58345 0%,#ec161e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58345', endColorstr='#ec161e',GradientType=0 );
+}
+.form-group{
+	margin-bottom:25px!important;
+}
+.form-group.has-error{
+	position:relative;
+}
+.form-group.has-error span{
+	position:absolute;
+	bottom:-30px;
+	left:0;
+}
+body{
+	background:transparent;
+	font:400 12px/18px 'Open Sans', sans-serif;
+}
+.login-wrapper,
+.geo-wrapper{
+	width:540px;
+	margin:8% auto 0;
+	background:#eee;
+	border:1px solid #f66014;
+}
+.geo-wrapper{
+	margin:15px auto 0;
+}
+.login{
+	padding:15px;
+}
+.login .login-title{
+	font-size:18px;
+	margin-bottom:10px;
+}
+.login .form-group label{
+	font-size:13px;
+	font-weight:400;
+}
+.login .form-control{
+	font-size:16px;
+}
+.login input,
+.login button,
+.login input:focus{
+	height:45px;
+	border-radius:0;
+	box-shadow:none;
+}
+.has-error .form-control,
+.has-error .form-control:focus{box-shadow:none}
+.login button.btn-default{
+	border-color:#888;
+	transition:color,background 0.7s ease-in-out 0s;
+}
+.login button.btn-default:focus{
+	background:#ffeeb3;
+}
+.login button.btn-default:hover{
+	color:#eee;
+	border-color:#666;
+	background:#e48605;
+}
+.login input:focus{
+	border-color:#439d2c;
+}
+.msg-error{
+	color:#f00;
+	padding:10px;
+	border:1px solid;
+	margin-bottom:10px;
+}
+.geo-wrapper .geo-trust{
+	padding:15px;
+}
+footer{
+	background:#439e29;
+}
+@media (max-width:747px){
+	.login button.btn-default{
+		width:100%;
+	}
+	.login-wrapper,
+	.geo-wrapper{
+		width:95%;
+		margin:2.5% auto 0;
+	}
+}

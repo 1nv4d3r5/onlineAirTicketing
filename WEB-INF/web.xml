@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+<servlet>
+<servlet-name>GetAuthorsProfile</servlet-name>
+<servlet-class>/admin/GetAuthorsProfile</servlet-class>
+</servlet>
+
+ <filter>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+            <init-param>
+                <param-name>logLevel</param-name>
+                <param-value>WARN</param-value>
+            </init-param>
+        </filter>
+        <filter-mapping>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+<servlet-mapping>
+<servlet-name>GetAuthorsProfile</servlet-name>
+<url-pattern>/admin/GetAuthorsProfile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+        <servlet-name>
+            IBX
+        </servlet-name>
+        <servlet-class>
+            util.AppConfig
+        </servlet-class>
+			<load-on-startup>
+				1	
+			</load-on-startup>
+    </servlet>
+		 
+		<session-config>
+		<session-timeout>
+	           1
+			 </session-timeout>
+	  </session-config>
+			
+<welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+<error-page>
+   <error-code>404</error-code>
+   <location>/error/error.jsp</location>
+   </error-page>
+    
+   <error-page>
+   <exception-type>java.lang.Throwable</exception-type>
+   <location>/error/error.jsp</location>
+   </error-page>
+	<login-config>
+		<auth-method>CLIENT-CERT</auth-method>
+	</login-config>
+
+</web-app>
