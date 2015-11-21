@@ -92,6 +92,44 @@ public class Admin{
 		return result;
 		      
 	}
+	
+	public List updateAdminDetail(String admId,String fullName,String address,String phone,
+								  String mobileNo,String emailId){
+		try{
+			
+			con = dbcon.getDbConnection() ;
+			sql ="update admin set ";
+			stmt = con.prepareStatement(sql); 
+			stmt.setInt(1,Integer.parseInt(admId));
+			rs = stmt.executeQuery();
+			
+			result  = new ArrayList();	
+			while ( rs.next() ) {
+				resultMap = new HashMap();
+				
+				resultMap.put("fullName",rs.getString("full_name"));
+				resultMap.put("address",rs.getString("address"));
+				resultMap.put("phone",rs.getString("phone"));
+				resultMap.put("mobileNo",rs.getString("mobile_no"));
+				resultMap.put("emailId",rs.getString("email_id"));
+				
+				result.add(resultMap);
+			}
+		} catch (SQLException errSql){
+			System.out.println("SQL Exception in getAdminDetail:"+errSql);			
+		} catch (Exception err){
+			System.out.println("Exception in getAdminDetail:"+err);
+		} finally {
+			try { 
+				if (rs != null) rs.close();
+				if (stmt != null) stmt.close();
+				if (con != null) con.close();
+			} catch (SQLException errSql){}
+		}
+		
+		return result;
+		      
+	}
  }
 
 
